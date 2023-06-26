@@ -27,3 +27,16 @@ function displayContacts() {
         })
     }
 }
+
+function addContact(event){
+    event.preventDefault();
+    const firstName = document.querySelector('#firstName').value 
+    const lastName = document.querySelector('#lastName').value
+    const phoneNumber = document.querySelector('#phoneNumber').value
+    const emailAddress = document.querySelector('#emailAddress').value
+
+    let contact = new Contact(firstName, lastName, phoneNumber, emailAddress)
+    contacts.push(contact)
+    displayContacts()
+    clearForm();
+}
