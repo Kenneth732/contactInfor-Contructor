@@ -5,3 +5,5 @@ function Contact(firstName, lastName, phoneNumber, emailAddress) {
     this.emailAddress = emailAddress
 }
 
+let contacts = [];
+
