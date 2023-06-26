@@ -55,3 +55,27 @@ function editContact(index) {
     contact.emailAddress = emailAddress
     displayContacts();
 }
+
+      // Function to delete a contact
+      function deleteContact(index) {
+        var confirmDelete = confirm("Are you sure you want to delete this contact?");
+  
+        if (confirmDelete) {
+          contacts.splice(index, 1);
+          displayContacts();
+        }
+      }
+  
+      // Function to clear the input form
+      function clearForm() {
+        document.getElementById("firstName").value = "";
+        document.getElementById("lastName").value = "";
+        document.getElementById("phoneNumber").value = "";
+        document.getElementById("emailAddress").value = "";
+      }
+  
+      // Add event listener to the form for adding contacts
+      document.getElementById("form").addEventListener("submit", addContact);
+  
+      // Call the function to display contacts initially
+      displayContacts();
