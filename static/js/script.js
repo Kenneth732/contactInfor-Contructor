@@ -40,3 +40,18 @@ function addContact(event){
     displayContacts()
     clearForm();
 }
+
+function editContact(index) {
+    const contact = contacts[index]
+
+    let firstName = prompt('', contact.firstName)
+    let lastName = prompt('', contact.lastName)
+    let phoneNumber = prompt('', contact.phoneNumber)
+    let emailAddress = prompt('', contact.emailAddress)
+
+    contact.firstName = firstName
+    contact.lastName = lastName
+    contact.phoneNumber = phoneNumber
+    contact.emailAddress = emailAddress
+    displayContacts();
+}
